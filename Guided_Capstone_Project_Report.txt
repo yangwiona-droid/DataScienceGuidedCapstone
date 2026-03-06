@@ -1,0 +1,78 @@
+Guided Capstone Project Report
+1. Executive Summary
+
+Big Mountain Resort currently charges $81 for an adult weekend ticket. Using a predictive model built from data on other ski resorts, we estimate that Big Mountain’s facilities could support a ticket price of approximately $94. This suggests the resort may be underpricing its tickets compared to similar resorts.
+
+In this report, we look at Big Mountain’s current position, compare it to other resorts, and explore four scenarios to see how changes in facilities might affect ticket prices and revenue.
+
+2. Data Overview and Exploratory Analysis
+
+We used a dataset of 277 ski resorts including features such as terrain, lifts, snow coverage, number of runs, and regional market context.
+
+Some key observations:
+
+Vertical Drop: Big Mountain ranks high compared to most resorts, but a few resorts have even higher drops.
+
+Snow-Making Area: Among the largest in the dataset, which helps ensure reliable conditions.
+
+Total Chairs and Fast Quads: Big Mountain has a high number of chairs and fast quads, which is good for reducing wait times.
+
+Runs and Longest Run: Offers a lot of options for visitors, with one of the longer runs in the dataset.
+
+Figures 1–5 show the distributions of these features, with Big Mountain marked on each. These plots help us see where the resort stands relative to competitors.
+
+3. Predictive Modeling
+
+We built a random forest regression model to predict adult weekend ticket price based on resort features. The model was trained on all resorts except Big Mountain to avoid biasing the prediction.
+
+Cross-validated MAE: $10.31 ± $1.29
+
+Predicted Big Mountain price: $94.33
+
+Actual price: $81
+
+This shows that Big Mountain could likely charge more. However, the model does not include operational costs like staffing or snow-making, so the suggested price is based on market comparisons, not profitability.
+
+4. Scenario Analysis
+
+We tested four scenarios to see how changes in facilities would affect ticket price and revenue:
+
+Closing Runs: Closing 1–10 of the least-used runs had little effect at first. Closing 6+ runs leads to noticeable drops in ticket price and revenue.
+
+Recommendation: Close runs gradually, focusing on underused ones.
+
+Add Run + Increase Vertical Drop + New Chair Lift:
+
+Ticket price increase: $2.12
+
+Expected revenue increase: $3.7M
+
+Scenario 2 + 2 Acres Snow Making: No significant change in ticket price.
+
+Increase Longest Run + 4 Acres Snow Making: No effect on ticket price.
+
+Figures 6–7 show predicted ticket price and revenue changes for Scenario 1 and Scenario 2.
+
+5. Recommendations
+
+Price Adjustment: Consider raising weekend ticket price toward the modeled support ($94), monitoring customer response.
+
+Facility Improvements: Adding runs and a new chair lift is worth exploring, as it can increase ticket price and revenue.
+
+Run Closures: Only close underused runs and track impact on revenue.
+
+Revenue Tracking: Make sure that added costs for lifts or snow-making don’t outweigh expected revenue.
+
+Model Tool: Allow business analysts to use the model interactively to explore future scenarios.
+
+6. Further Work
+
+Include more cost information to evaluate profitability.
+
+Gather visitor feedback to check price sensitivity.
+
+Update the model regularly with new data to maintain accuracy.
+
+Use scenario simulations for leadership decisions without requiring data team support every time.
+
+Conclusion: Big Mountain is currently underpriced compared to similar resorts. Small facility improvements and a moderate price increase could boost revenue, while careful planning is needed for run closures.
